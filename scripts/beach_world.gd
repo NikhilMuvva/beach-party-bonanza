@@ -284,4 +284,3 @@ func _update_hand(hand: String) -> void:
 	var lift := float(hand_flash[hand]) / 0.24 * 8.0
 	wrist.y += clampf((float(hand_y[hand]) - 0.5) * 24, -8, 8) - lift
 	sprite.position = wrist - HandArt.WRIST_ANCHORS[hand] * HandArt.DISPLAY_SCALE
-
