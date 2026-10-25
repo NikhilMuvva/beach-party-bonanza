@@ -21,39 +21,77 @@ Built with **Godot 4, Python, MediaPipe, and OpenCV**, the game also includes a 
 - **Windows or macOS** with access to the extracted project folder.
 - **Python 3.11** for webcam tracking and its pinned dependencies.
 - A webcam and camera permissions for camera mode. **Keyboard mode does not require webcam/Python tracking packages.**
+- **Git** only if you choose the cloning method below. You **do not need Git or Python to test Keyboard Mode from the Godot editor.**
 
-### 2. Get the project
-Clone the repository (do this in Command Prompt):
-```powershell
+### 2. Download the repository (choose ONE method)
+**Option A — Clone with Git (recommended if Git is already installed)**
+Open Command Prompt on Windows. Check Git:
+```cmd
+git --version
+```
+Then run these commands in order, waiting for each to finish:
+```cmd
+cd /d "%USERPROFILE%"
 git clone https://github.com/NikhilMuvva/frat-flick.git
-cd frat-flick/Frat_Flicks/Frat_Flicks_Godot
+cd frat-flick\Frat_Flicks\Frat_Flicks_Godot
+dir project.godot
 ```
-Alternatively, select **Code → Download ZIP** on GitHub, extract the entire ZIP, and open the nested folder:
+The `git clone` command creates the `frat-flick folder`. **Do not run `cd frat-flick\...` before cloning or downloading the repository.** The last command should list project.godot, proving you're inside the correct folder.
+
+**Already cloned it elsewhere?** Don't clone again. Find the existing `frat-flick` folder in File Explorer, navigate into `Frat_Flicks\Frat_Flicks_Godot`, click the address bar, copy its complete path, then enter `cd /d "PASTE_YOUR_COPIED_PATH_HERE"` in Command Prompt.
+
+**Option B — Download a ZIP (no Git required)**
+1. Open the Frat Flicks GitHub repository.
+2. Click **Code → Download ZIP**.
+3. In your Downloads folder, right-click the ZIP and choose **Extract All**. **Don't run the game directly from the ZIP.**
+4. Open the extracted folder (often named `frat-flick-main`). Then open `Frat_Flicks → Frat_Flicks_Godot`.
+5. Confirm you see both `**project.godot**` and `**launch.py**` in this same folder. This is the Godot project root. You can open it directly in VS Code with **File → Open Folder**.
+6. To use Command Prompt, click the File Explorer address bar, copy the full folder path, then run:
+```cmd
+   cd /d "PASTE_YOUR_COPIED_PATH_HERE"
+   dir project.godot
+```
+Your folder structure should include:
 ```text
-frat-flick/
+frat-flick/                       <-- GitHub repository root
 └── Frat_Flicks/
-    └── Frat_Flicks_Godot/    ← Godot project folder
-        └── project.godot
+    └── Frat_Flicks_Godot/       <-- Godot project root
+        ├── project.godot
+        ├── launch.py
+        ├── scenes/
+        ├── scripts/
+        ├── tracker/
+        └── assets/
 ```
-**Important:** The GitHub repository root is not the Godot `project root`. Select the project.godot inside `Frat_Flicks/Frat_Flicks_Godot`.
+**Important**: `Frat_Flicks.zip` in the repository is a separate archived file. For these instructions, use the normal repository clone/download and import the nested `project.godot` shown above.
 
-**Windows (VS Code PowerShell terminal):**
-1. Install Python **3.11** and Godot.
-2. In VS Code, choose **File → Open Folder** and open `Frat_Flicks/Frat_Flicks_Godot`.
-3. Open **Terminal → New Terminal** and verify that `launch.py` is in the current folder.
-4. Run:
-   ```powershell
-   py -3.11 launch.py
-   ```
-   If Godot is not found automatically, give the actual path to your Godot executable:
-   ```
-   py -3.11 launch.py --godot "C:\Path\To\Godot.exe"
-   ```
-**macOS:** From the Godot project folder, run `python3 launch.py` in Terminal, or use the included `Start.command` after reviewing it. If necessary, pass `--godot /Applications/Godot.app`.
+### 4. Run Webcam Mode from the terminal
+Make sure **Python 3.11** is installed and that your terminal is in the folder containing `launch.py`.
 
-The launcher supports `--camera 1` for an alternate webcam, `--swap-hands` if left/right labels are reversed, and `--preview` for a diagnostic camera window. Run `python launch.py --help` to see additional options.
+On Windows, verify Python and then launch the game:
+```cmd
+py -3.11 --version
+py -3.11 launch.py
+```
+The launcher installs the project's pinned hand-tracking packages automatically if needed, then starts Godot and the tracker. If your installed compatible version is Python 3.12, use `py -3.12` instead.
 
-### 3. Webcam Calibration and Gameplay
+If the launcher **cannot find your Godot executable**, specify its real location:
+```cmd
+py -3.11 launch.py --godot "C:\Path\To\Your\Godot.exe"
+```
+Replace that example path with the actual `.exe` file path on your computer. You can find it in File Explorer by locating the executable, then using **Shift + right-click → Copy as path.**
+
+If you already launched the game with **F5 from the Godot editor**, start only the hand tracker in a separate terminal instead:
+```cmd
+py -3.11 launch.py --tracker-only
+```
+On **macOS**, open Terminal in the same Godot project folder and use a compatible Python installation:
+```bash
+python3 launch.py
+```
+Useful optional flags include `--camera 1` (another webcam), `--swap-hands` (reverse hand assignment), `--preview` (diagnostic camera window), and `--keyboard` (launch without the tracker). Run `py -3.11 launch.py --help` on Windows for more options.
+
+### 4. Webcam Calibration and Gameplay
 1. From the title screen, select a song and begin **Camera** play.
 2. Follow Bob's introduction and the in-game instructions (or use Skip Intro).
 3. Keep **both hands visible and still** for the **two-second automatic baseline.**
