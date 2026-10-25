@@ -81,6 +81,7 @@ py -3.11 launch.py --godot "C:\Path\To\Your\Godot.exe"
 ```
 Replace that example path with the actual `.exe` file path on your computer. You can find it in File Explorer by locating the executable, then using **Shift + right-click → Copy as path.**
 
+**Recommended**
 If you already launched the game with **F5 from the Godot editor**, start only the hand tracker in a separate terminal instead:
 ```cmd
 py -3.11 launch.py --tracker-only
