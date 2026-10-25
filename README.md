@@ -25,6 +25,7 @@ Built with **Godot 4, Python, MediaPipe, and OpenCV**, the game also includes a 
 
 ### 2. Download the repository (choose ONE method)
 **Option A — Clone with Git (recommended if Git is already installed)**
+
 Open Command Prompt on Windows. Check Git:
 ```cmd
 git --version
