@@ -1,0 +1,7 @@
+.godot/
+.venv*/
+__pycache__/
+logs/
+builds/
+*.tmp
+.DS_Store

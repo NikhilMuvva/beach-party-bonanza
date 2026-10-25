@@ -1,0 +1,37 @@
+[
+  {
+    "name": "sweet rally",
+    "bpm": 130.731,
+    "duration": 69.2419,
+    "pattern": "LRLRLLRR",
+    "targets": 61
+  },
+  {
+    "name": "Paradise",
+    "bpm": 117.914,
+    "duration": 123.0658,
+    "pattern": "LLRRLRRL",
+    "targets": 81
+  },
+  {
+    "name": "Make U Whole",
+    "bpm": 171.818,
+    "duration": 29.7535,
+    "pattern": "LRRLRLLR",
+    "targets": 22
+  },
+  {
+    "name": "Eatin' Good",
+    "bpm": 125.284,
+    "duration": 221.9595,
+    "pattern": "LRLLRLRR",
+    "targets": 203
+  },
+  {
+    "name": "Free Your Mind",
+    "bpm": 127.95,
+    "duration": 201.7582,
+    "pattern": "RLLRRLRL",
+    "targets": 185
+  }
+]

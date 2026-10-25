@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/beach_world.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/tracker_bridge.gd" id="3"]
+
+[node name="BeachPartyBonanza" type="Node2D"]
+script = ExtResource("1")
+
+[node name="BeachWorld" type="Node2D" parent="."]
+script = ExtResource("2")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+volume_db = -5.0
+
+[node name="TrackerBridge" type="Node" parent="."]
+script = ExtResource("3")
+
+[node name="Interface" type="CanvasLayer" parent="."]

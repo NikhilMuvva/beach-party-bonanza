@@ -1,0 +1,27 @@
+[
+  {
+    "name": "sweet rally",
+    "artist": "ilysam, Mc Ster",
+    "path": "res://assets/audio/title_music/sweet_rally.mp3"
+  },
+  {
+    "name": "Paradise",
+    "artist": "dentist",
+    "path": "res://assets/audio/title_music/paradise.mp3"
+  },
+  {
+    "name": "Make U Whole",
+    "artist": "GEEMIX",
+    "path": "res://assets/audio/title_music/make_u_whole.mp3"
+  },
+  {
+    "name": "Eatin' Good",
+    "artist": "Woodcamp",
+    "path": "res://assets/audio/title_music/eatin_good.mp3"
+  },
+  {
+    "name": "Free Your Mind",
+    "artist": "Prospa, Cloonee, Sybil",
+    "path": "res://assets/audio/title_music/free_your_mind.mp3"
+  }
+]
